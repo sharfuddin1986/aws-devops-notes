@@ -41,3 +41,7 @@ Actually the amend opertion will be destroy the start that was prevmously save i
    There are no ther git repos , and none of your other teamates had a local copy, How would you recorver the branch ? 
 # git reflog  
 # git checkout -b branch-name // then checkout as  a new branch
+
+9) MFA enabale in git hub account then u can not push directly we need  security token
+ 
+ #sudo git remote set-url origin https://sharfuddin1986:acess_token@github.com/sharfuddin1986/test.git
