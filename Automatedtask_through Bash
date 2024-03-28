@@ -1,1 +1,43 @@
 # I need to install terraform in ec2 instance automated with Bash
+
+step
+
+     Go to ec2 instance 
+     nano install_terraform.sh
+     chmod +x install_terraform.sh
+     sudo apt-get install unzip
+     sudo mkdir -p /usr/local/bin
+     sudo apt-get install jq
+     ./install_terraform.sh
+
+
+
+
+
+
+script 
+
+  
+#!/bin/bash
+
+# Download latest Terraform binary
+TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
+TERRAFORM_URL="https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
+wget ${TERRAFORM_URL} -O /tmp/terraform.zip
+
+# Unzip Terraform binary
+sudo unzip /tmp/terraform.zip -d /usr/local/bin/
+
+# Set execute permissions
+sudo chmod +x /usr/local/bin/terraform
+
+# Verify Terraform installation
+terraform --version
+
+# Clean up
+rm /tmp/terraform.zip
+
+
+
+ 
+
