@@ -1,5 +1,22 @@
 # How to access EC2 Instance even if PEM file is lost
 
+1st Solution
+
+Step1- Detach the ebs  volume of old instance 
+step2- create temporay instance and attach old ebs volume 
+       # cd /mnt
+       # mkdir myvloume
+       # mount /dev/xvdp1 /mnt/myvolume/
+       # cp /home/ubuntu/.ssh/authorized_keys /mnt/myvolume/home/ubuntu/.ssh/
+       # umount /mnt/myvolume/
+     
+step3- Teraminate the temporary instance and login old instance with new pem key 
+
+       After sucessfully loging with new pem key 
+     
+
+
+2nd Solution 
 
 Step1- Take the snapshot of old volume 
        create new volume through snapshot
