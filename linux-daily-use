@@ -34,3 +34,6 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
   
 #  how to give protective permission to file 
   chmod 400 <filename>
+
+# New user creation with specific UUID 
+  useradd -u 1256 -d /var/www/saif -m saif      -u= uuid number -d=set the home directory  -m=create home directory if doesnt exist
