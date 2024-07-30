@@ -40,3 +40,15 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
 
 # New user add in specific group
   sudo usermod -aG nautilus_developers mohammed
+
+# Create the User with a Non-Interactive Shell
+  sudo useradd -s /sbin/nologin james    -s=/sbin/nologin specifies the shell, effectively setting a non-interactive shell for the user.
+
+# Create the User without home directory 
+  sudo useradd -M james              -M=prevents the creation of a home directory for the user.
+
+# Create the User with an Expiry Date
+  sudo useradd -e 2023-12-07 yousuf
+  sudo chage -l yousuf               check status 
+
+
