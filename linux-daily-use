@@ -22,6 +22,8 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
 
 # check the remote mounting information (parament mount) 
   cat /etc/fstab
+# Change the  Current Timezone
+  timedatectl set-timezone Australia/Darwin
 
 # Listout all soft mount -
   mount -t cifs
