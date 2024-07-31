@@ -53,4 +53,7 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
   sudo useradd -e 2023-12-07 yousuf
   sudo chage -l yousuf               check status 
 
+# Disable Root Login
+  sudo nano /etc/ssh/sshd_config              permission root login no change this value 
+  sudo systemctl restart sshd
 
