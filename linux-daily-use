@@ -56,4 +56,6 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
 # Disable Root Login
   sudo nano /etc/ssh/sshd_config              permission root login no change this value 
   sudo systemctl restart sshd
-
+# Allow & Restrict crontab for particular user 
+  sudo nano /etc/cron.allow     (write user name what user u want to allow and save exit)
+  sudo nano /etc/cron.deny       (write user name what user u want to deny and save exit)
