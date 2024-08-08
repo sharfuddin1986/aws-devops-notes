@@ -52,6 +52,9 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
 # Create the User with an Expiry Date
   sudo useradd -e 2023-12-07 yousuf
   sudo chage -l yousuf               check status 
+# User is already create i need to fix expiration date 2024-01-28
+  sudo chage -E 2024-01-28 ravi
+  sudo chage -l ravi
 
 # Disable Root Login
   sudo nano /etc/ssh/sshd_config              permission root login no change this value 
