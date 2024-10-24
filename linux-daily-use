@@ -62,3 +62,6 @@ tar -xf apache-tomcat-9.0.74.tar.gz -C tmp/
 # Allow & Restrict crontab for particular user 
   sudo nano /etc/cron.allow     (write user name what user u want to allow and save exit)
   sudo nano /etc/cron.deny       (write user name what user u want to deny and save exit)
+
+# user list in Aws # aws configure
+   aws iam list-users
